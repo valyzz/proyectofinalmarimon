@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+  .plato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .plato-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  .plato-card img:hover {
+    transform: scale(1.1);
+  }
+  .plato-card .precio {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .plato-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+
+  }
+  
+  
+
+/* ESTILOS DEL INDEX */
+
+
+@keyframes tada {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.05); } }
+
+
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width: 1024px) {
+  /* Estilos para el nav*/
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: right; }
+  header .navbar-nav {
+    display: flex;
+    margin-left: 90px; }
+  header .navbar-brand {
+    margin-right: 400px; }
+  header .navbar-nav a {
+    margin-right: 15px;
+    margin-left: 5px; }
+
+
+/* animacion */
+@keyframes animate__pulse {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.05); } }
+
+@keyframes shadow {
+  from {
+    box-shadow: none; }
+  to {
+    box-shadow: 0px 0px 10px #dfc99b; } }
+
+ 
+/* Estilos generales */
+body {
+  background-color: #eae2d2; }
+  body a,
+  body a:active {
+    text-decoration: none;
+    color: #4d4c1a; }
+
+/*Estilos para el logo del menú de Bootstrap  */
+header .navbar .navbar-brand {
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  padding: 0; }
+  header .navbar .navbar-brand .logo {
+    width: 200;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #d7d6d6; }
+
+header .navbar .navbar-nav {
+  font-family: 'Merriweather', serif;
+  font-size: 1em; }
+  header .navbar .navbar-nav .nav-link {
+    font-family: 'Merriweather', serif;
+    font-size: 1em; }
+
+main {
+  background-color: #ece8df;
+  font-family: 'Merriweather', serif; }
+
+/* estilos del footer */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #a4935b;
+  font-family: 'Merriweather', serif; }
+  .footer-container .whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; }
+    .footer-container .whatsapp-link .whatsapp-icon {
+      width: 50px; }
+  .footer-container .instagram-icon {
+    width: 15px;
+    height: auto;
+    margin-right: 3px; }
+  .footer-container .footer-text {
+    margin-top: 0; } 
+  }
+
+  

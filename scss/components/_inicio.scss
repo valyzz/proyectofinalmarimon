@@ -1,0 +1,143 @@
+//variables
+
+@import "../utilidades/mixing";
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+/* ESTILOS DEL INDEX */
+/* Estilos del formulario con grid */
+.begin {
+
+    //mixing sin parametros
+    h1 {
+        @include centro;
+    }
+
+    .photo {
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    //mixing sin parametros
+    .texto-reserva {
+        @include centro;
+    }
+
+    .text-dos {
+        @include centro;
+
+        &:hover {
+            animation-duration: 1s;
+            animation-name: tada;
+        }
+    }
+
+    //animacion index
+
+    @keyframes tada {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.05);
+
+        }
+    }
+
+    .formulario-reserva {
+        display: grid;
+        gap: 10px;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border: 10px solid #ddd;
+        border-radius: 5px;
+        overflow-x: hidden;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #8f9e81;
+        color: $color-form;
+        cursor: pointer;
+    }
+
+    button[type="reset"] {
+        background-color: #ccc;
+        color: $color-form;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    //Estilos para el mapa
+    .map-container {
+        @include flex;
+        overflow: hidden;
+        margin-top: 20px;
+        max-width: 100%;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+        }
+    }
+}
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width:1024px) {
+
+    /* Estilos para el nav*/
+    header {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+        }
+
+        .navbar-nav {
+            display: flex;
+            margin-left: 90px;
+        }
+
+        .navbar-brand {
+            margin-right: 400px;
+        }
+
+        .navbar-nav a {
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+
+        //estilos del formulario
+        .formulario-reserva {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+
+}

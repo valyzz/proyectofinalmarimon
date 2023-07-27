@@ -1,0 +1,83 @@
+//variables
+
+@import "../utilidades/mixing";
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+
+//nesting
+/* Estilos Restaurante*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  justify-items: center;
+
+  .product,
+  .prod-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0;
+  }
+
+  .onepic,
+  .twopic,
+  .threepic,
+  .fourpic,
+  .fivepic,
+  .sixpic {
+    //mixing sin parametros
+    @include fotolugar;
+
+    //variables
+    img {
+      width: 100%;
+      height: auto;
+      border: 5px solid $color-cuadro;
+    }
+
+
+    &:hover {
+      background-color: $color-hover;
+      cursor: pointer;
+
+      img {
+        border-color: $color-hover;
+      }
+    }
+  }
+
+  //estilos especificos de celular 
+  @media screen and (max-width: 768px) {
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+
+    .onepic,
+    .twopic,
+    .threepic,
+    .fourpic,
+    .fivepic,
+    .sixpic {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid $color-cuadro;
+      }
+
+      &:hover {
+        background-color: $color-hover;
+        cursor: pointer;
+
+        img {
+          border-color: $color-hover;
+        }
+      }
+    }
+  }
+}

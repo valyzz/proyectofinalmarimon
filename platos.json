@@ -1,0 +1,10 @@
+[
+      { "id": 1, "nombre": "Huevos", "precio": 8000, "categoria": "desayuno", "rutaImagen": "./img/eggs.png" },
+      { "id": 2, "nombre": "Pasta", "precio": 20000, "categoria": "cena", "rutaImagen": "./img/pasta.png" },
+      { "id": 3, "nombre": "Hamburguesa", "precio": 25000, "categoria": "cena", "rutaImagen": "./img/burger.png" },
+      { "id": 4, "nombre": "Cayeye", "precio": 18000, "categoria": "desayuno", "rutaImagen": "./img/cayeyes.png" },
+      { "id": 5, "nombre": "Pastel", "precio": 9000, "categoria": "almuerzo", "rutaImagen": "./img/pastel.png" },
+      { "id": 6, "nombre": "Asados", "precio": 22000, "categoria": "almuerzo", "rutaImagen": "./img/asado.png" }
+    ]
+  
+  

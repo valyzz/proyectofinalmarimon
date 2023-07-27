@@ -1,0 +1,83 @@
+//mixing sin parametros
+
+@mixin letra {
+    font-family: 'Merriweather', serif;
+}
+@mixin logotipo {
+    width: 200;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #d7d6d6;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centro {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@mixin forma {
+    font-size: 1rem;
+    text-align: center;
+}
+
+@mixin alineado {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+@mixin fotolugar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+@mixin ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #a4935b;
+}
+
+@mixin wpp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+@mixin icon {
+    width: 15px;
+    height: auto;
+    margin-right: 3px;
+}
+
+@mixin screenview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+@mixin medida {
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin galeria {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33%);
+    gap: 1rem;
+    margin: 1rem 3rem 3rem 3rem;
+}

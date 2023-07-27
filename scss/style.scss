@@ -1,0 +1,82 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Archivos secundarios
+@import "components/inicio";
+@import "components/restaurante";
+
+//variables
+@import "../scss/utilidades/mixing";
+@import "../scss/utilidades/variables";
+
+/* Estilos generales */
+body {
+    background-color: $color-principal;
+
+    a,
+    a:active {
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+
+/*Estilos para el logo del menú de Bootstrap  */
+header {
+    .navbar {
+        .navbar-brand {
+            @include letra;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            .logo {
+                @include logotipo;
+            }
+        }
+
+        .navbar-nav {
+            @include letra;
+            font-size: 1em;
+
+            .nav-link {
+                @include letra;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+main {
+    background-color: $color-secundario;
+    @include letra;
+}
+
+/* estilos del footer */
+//mixin
+.footer-container {
+    @include ubicacion;
+    @include letra;
+
+    .whatsapp-link {
+        @include wpp;
+
+        .whatsapp-icon {
+            width: 50px;
+        }
+    }
+
+
+
+    .instagram-icon {
+        @include icon;
+    }
+
+    .footer-text {
+        margin-top: 0;
+    }
+}
